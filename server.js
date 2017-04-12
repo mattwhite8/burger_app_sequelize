@@ -2,7 +2,7 @@
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
-var orm = require("./config/orm.js");
+var db = require("./models");
 
 var PORT = process.env.PORT || 3000;
 
@@ -27,7 +27,8 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-// Checking to make sure that our table exists, if not create it
-orm.createTable();
-
-app.listen(PORT);
+db.sequelize.sync().then(function(){
+	app.listen(PORT, function() {
+	  console.log("App listening on PORT: " + PORT);
+	});	
+});
