@@ -16,7 +16,7 @@
   },
   "production": {
     "JawsDB_URL":"mysql://d3fwyvfyj14c1urm:ghfawx2by26ljqml@wftuqljwesiffol6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/wjh2z5o9l2122n1p",
-    "database": "burgers_db",
+    "database": "wjh2z5o9l2122n1p",
     "host": "wftuqljwesiffol6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "username": "d3fwyvfyj14c1urm",
     "password": "ghfawx2by26ljqml",
