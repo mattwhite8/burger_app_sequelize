@@ -1,0 +1,48 @@
+body {
+	background-color: #FF9D1F;
+	color: white;
+	font-family: 'Lobster', cursive;
+}
+
+button {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+}
+
+input {
+	color: black;
+}
+
+#input {
+	background-color: #38FF69;
+	border-radius: 15px 15px 0 0;
+}
+
+#burgs {
+	background-color: #7F5F36;
+}
+
+#eaten {
+	background-color: #FFBE6B;
+	border-radius: 0 0 15px 15px;
+}
+
+#burger-form {
+	margin-top: 20px;
+}
+
+div.container {
+	box-shadow: 10px 10px 15px grey;
+	border: solid;
+	border-radius: 18px;
+}
+
+div.text-center > ul {
+	padding-left: 0;
+	list-style: none;
+	font-family: 'Raleway', sans-serif;
+}
+
+div.text-center > ul > ul {
+	padding-left: 0;
+}

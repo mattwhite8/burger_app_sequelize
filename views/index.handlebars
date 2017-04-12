@@ -1,0 +1,83 @@
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-2 col-md-offset-5">
+          <img src="burg.png" class="img-responsive">
+          <div class="text-center"><h1>Eat-Da-Burg</h1>
+      </div>
+    </div> 
+  </div> {{!-- .container-fluid --}}
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-xs-10 col-xs-offset-1">
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-xs-12" id="input">
+              <div class="col-xs-6 col-xs-offset-3">
+                <div class="form-group" id="burger-form">
+                  <form action="/" method="POST">
+                    <input type="text" name="name" class="form-control">
+                    <button type="submit" class="btn btn-default">Make Burg!</button>
+                  </form>
+                </div> {{!-- .form-group --}}
+              </div> {{!-- .col-xs-6 col-xs-offset-3 --}}
+            </div> {{!-- .input --}}
+          </div> {{!-- .row --}}
+
+          <div class="row">
+            <div class="col-xs-12" id="burgs">
+              <div class="text-center">
+                <h2> Burgs </h2>
+                <ul>
+                  {{#each burgers}}
+                    {{#unless this.devoured}}
+                        <li>
+                          {{this.burger_name}}
+
+                          <div class="form-group">
+                            <form action="/{{this.id}}?_method=PUT" method="POST">
+                              <button type="submit" class="btn btn-default">EAT!</button>
+                            </form>
+                          </div>
+
+                        </li>
+                      {{/unless}}
+                  {{/each}}
+                </ul>
+              </div> {{!-- .text-center --}}
+            </div> {{!-- #burgs --}}
+          </div> {{!-- .row --}}
+
+          <div class="row">
+            <div class="col-xs-12" id="eaten">
+              <div class="text-center">
+                <h2> Devoured Burgs </h2>
+                <ul>
+                  {{#each burgers}}
+                    {{#if this.devoured}}
+                      <ul>
+                        {{this.burger_name}}
+                      </ul>
+                    {{/if}}
+                  {{/each}}
+                </ul>
+              </div> {{!-- .text-center --}}
+            </div> {{!-- #eaten --}}
+          </div> {{!-- .row --}}
+
+        </div> {{!-- .container --}}
+
+      </div> {{!-- .col-xs-10 col-xs-offset-1 --}}
+
+    </div> {{!-- .row --}}
+
+    <div><br></div> {{!-- making space --}}
+
+  </div> {{!-- .container-fluid --}}
+
+
+
